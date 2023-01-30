@@ -13,7 +13,6 @@ variables:
   buildConfiguration: 'Release'
   outputDirectory: '$(build.binariesDirectory)/$(buildConfiguration)'
   solutionName : 'Crypollet.sln'
-  androidProject : 'Cryptollet.Android/Cryptollet.Android.csproj'
 
 jobs:
 
@@ -30,7 +29,7 @@ jobs:
 
   - task: XamarinAndroid@1
     inputs:
-      projectFile: '$(androidProject)'
+      projectFile: '**/*droid*.csproj'
       outputDirectory: '$(outputDirectory)'
       configuration: '$(buildConfiguration)'
 
