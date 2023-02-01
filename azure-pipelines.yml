@@ -12,7 +12,7 @@ pool:
 variables:
   buildConfiguration: 'Release'
   outputDirectory: '$(build.binariesDirectory)/$(buildConfiguration)'
-  solutionName : 'Crypollet.sln'
+  solutionName: 'Crypollet.sln'
 
 jobs:
 
@@ -48,7 +48,7 @@ jobs:
   - task: XamariniOS@2
     inputs:
       solutionFile: '$(solutionName)'
-      configuration: 'Release'
+      configuration: '$(buildConfiguration)'
       packageApp: false
       buildForSimulator: true
       runNugetRestore: false
