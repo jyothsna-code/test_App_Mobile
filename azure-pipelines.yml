@@ -26,6 +26,10 @@ jobs:
   - task: NuGetCommand@2
     inputs:
       restoreSolution: '$(solutionName)'
+      
+  - script:
+       ls
+    displayName: 'show contents in file'
 
   - task: XamarinAndroid@1
     inputs:
